@@ -15,7 +15,10 @@
   "author": "Dimitri Dessus",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
     "express": "^4.15.4",
+    "jsonwebtoken": "^8.1.0",
     "mysql": "^2.15.0",
     "sequelize": "^3.30.4"
   }
