@@ -15,6 +15,7 @@
   "author": "Dimitri Dessus",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.0",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.15.4",
