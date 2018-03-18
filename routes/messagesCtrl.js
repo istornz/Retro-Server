@@ -6,6 +6,7 @@ var jwtUtils = require('../utils/jwt.utils');
 // Constants
 const TITLE_LIMIT   = 2;
 const CONTENT_LIMIT = 4;
+const ITEMS_LIMIT   = 50;
 
 // Routes
 module.exports = {
@@ -66,6 +67,10 @@ module.exports = {
     var limit   = parseInt(req.query.limit);
     var offset  = parseInt(req.query.offset);
     var order   = req.query.order;
+
+    if (limit > ITEMS_LIMIT) {
+      limit = ITEMS_LIMIT;
+    }
 
     models.Message.findAll({
       order: [(order != null) ? order.split(':') : ['title', 'ASC']],
